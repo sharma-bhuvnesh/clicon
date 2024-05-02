@@ -1,0 +1,30 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/*    Feature Product Slider    */
+.feature-product-slider .slick-dots {
+    width: auto;
+    bottom: 36px;
+    left: 45px;
+}
+
+.feature-product-slider .slick-dots {
+    width: auto;
+    bottom: 36px;
+    left: 52px;
+}
+
+.feature-product-slider .slick-dots li, .feature-product-slider .slick-dots li button {
+    width: 10px;
+    height: 10px;
+}
+
+.feature-product-slider .slick-dots li button:before {
+    content: " ";
+    background: #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}

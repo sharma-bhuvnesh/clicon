@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const { Router } = require("express");
+const routes = Router();
+const handleExceptions = require("./middleware/handleExceptions");
+const validateInput = require("./middleware/validateInput");
+const { loginSchema, registerSchema } = require("./validations/user");
+const { login, register } = require("./controller/user");
+const { addProduct } = require("./controller/product");
+routes.post("/login", validateInput(loginSchema), handleExceptions(login));
+routes.post("/register", validateInput(registerSchema), handleExceptions(register));
+routes.post("/product/add", handleExceptions(addProduct));
+exports.default = routes;
